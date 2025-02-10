@@ -1,0 +1,1 @@
+console.log("Wiki site loaded successfully!");
