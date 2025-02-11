@@ -66,6 +66,7 @@ function generateArticlePage(article) {
   </style>
 </head>
 <body>
+
   <header>
     <h1>${article.title}</h1>
     <nav>
@@ -73,6 +74,20 @@ function generateArticlePage(article) {
       <a href="../about.html">About</a>
     </nav>
   </header>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    <!-- Article page add -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="3848103482"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
   <main>
     <section>
       <h2>Short Description</h2>
@@ -83,8 +98,36 @@ function generateArticlePage(article) {
       <p>${article.article}</p>
     </section>
   </main>
+    
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    <!-- article page add bottom -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="8058811235"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
   <footer>
     <p>&copy; 2025 Wiki Site</p>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    <!-- Footer Ad -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="5928860661"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
   </footer>
 </body>
 </html>`;
@@ -188,17 +231,20 @@ function generateIndexPage(articlesInfo) {
       <a href="about.html">About</a>
     </nav>
   </header>
-  <!-- Top-level ad container -->
-  <div id="ad-container">
+  
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+        crossorigin="anonymous"></script>
+    <!-- add index page top -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXX"
-         data-ad-slot="YYYYYYYYYY"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="9755036286"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+  
   </div>
   <main>
     <h2>Articles</h2>
@@ -206,8 +252,37 @@ function generateIndexPage(articlesInfo) {
       ${linksHtml}
     </ul>
   </main>
-  <footer>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    <!-- index page ad bottom -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="6834951798"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  
+    <footer>
     <p>&copy; 2025 Wiki Site</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    <!-- Footer Ad -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="5928860661"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </footer>
 </body>
 </html>`;
