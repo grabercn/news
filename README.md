@@ -1,2 +1,1 @@
-# wiki.grabercn.github.io
-Wiki
+News Site
