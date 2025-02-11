@@ -17,6 +17,7 @@ function generateArticlePage(article) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="google-site-verification" content="sKW7J47k_ZTMFQb3F858OgHLRVikjHJjwhyhAvtyehg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${article.shortDesc}">
   <title>${article.title}</title>
@@ -66,7 +67,6 @@ function generateArticlePage(article) {
   </style>
 </head>
 <body>
-
   <header>
     <h1>${article.title}</h1>
     <nav>
@@ -75,18 +75,18 @@ function generateArticlePage(article) {
     </nav>
   </header>
 
+  <!-- Top ad for article page -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
      crossorigin="anonymous"></script>
-    <!-- Article page add -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="3848103482"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6853203533491695"
+       data-ad-slot="3848103482"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
   <main>
     <section>
@@ -99,35 +99,33 @@ function generateArticlePage(article) {
     </section>
   </main>
     
+  <!-- Bottom ad for article page -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
      crossorigin="anonymous"></script>
-    <!-- article page add bottom -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="8058811235"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6853203533491695"
+       data-ad-slot="8058811235"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
   <footer>
     <p>&copy; 2025 Wiki Site</p>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
-     crossorigin="anonymous"></script>
     <!-- Footer Ad -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+       crossorigin="anonymous"></script>
     <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="5928860661"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+         style="display:block"
+         data-ad-client="ca-pub-6853203533491695"
+         data-ad-slot="5928860661"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-
   </footer>
 </body>
 </html>`;
@@ -136,7 +134,7 @@ function generateArticlePage(article) {
 
 /**
  * Generate the main index.html page that lists all article links.
- * We improve the list styling, add a container for padding, and include a top-level ad container.
+ * Improved styling for the list and container.
  */
 function generateIndexPage(articlesInfo) {
   const linksHtml = articlesInfo.map(info => {
@@ -153,8 +151,6 @@ function generateIndexPage(articlesInfo) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Wiki Home">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
-     crossorigin="anonymous"></script>
   <title>Wiki Home</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -214,13 +210,17 @@ function generateIndexPage(articlesInfo) {
       color: #777;
     }
   </style>
-  <!-- Google Ads snippet placeholder -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Top-level ad container -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6853203533491695"
+       data-ad-slot="9755036286"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
   <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-XXXXXXXXXXXX", 
-      enable_page_level_ads: true
-    });
+       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </head>
 <body>
@@ -231,61 +231,60 @@ function generateIndexPage(articlesInfo) {
       <a href="about.html">About</a>
     </nav>
   </header>
-  
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
-        crossorigin="anonymous"></script>
-    <!-- add index page top -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="9755036286"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  
-  </div>
   <main>
     <h2>Articles</h2>
     <ul>
       ${linksHtml}
     </ul>
   </main>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+  <!-- Index page bottom ad -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
      crossorigin="anonymous"></script>
-    
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
-     crossorigin="anonymous"></script>
-    <!-- index page ad bottom -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="6834951798"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  
-    <footer>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6853203533491695"
+       data-ad-slot="6834951798"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <footer>
     <p>&copy; 2025 Wiki Site</p>
+    <!-- Footer Ad -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
      crossorigin="anonymous"></script>
-    <!-- Footer Ad -->
     <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-6853203533491695"
-        data-ad-slot="5928860661"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+         style="display:block"
+         data-ad-client="ca-pub-6853203533491695"
+         data-ad-slot="5928860661"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </footer>
 </body>
 </html>`;
+}
+
+// Function to generate a sitemap.xml file that includes all pages.
+function generateSitemap(articlesInfo) {
+  // Base URL for your site – update this with your actual base URL.
+  const baseUrl = 'https://grabercn.github.io/wiki';
+  let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  sitemapXml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+  // Add the index page.
+  sitemapXml += `  <url>\n    <loc>${baseUrl}/index.html</loc>\n  </url>\n`;
+
+  // Add each article page.
+  articlesInfo.forEach(info => {
+    sitemapXml += `  <url>\n    <loc>${baseUrl}/pages/${info.slug}.html</loc>\n  </url>\n`;
+  });
+
+  sitemapXml += `</urlset>\n`;
+  return sitemapXml;
 }
 
 // Path to the articles JSON file (assumed to be generated by your article generation process)
@@ -321,4 +320,8 @@ articles.forEach(article => {
 const indexHtml = generateIndexPage(articlesInfo);
 fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtml, 'utf8');
 
-console.log('Index and article pages generated successfully.');
+// Generate the sitemap.xml file.
+const sitemapXml = generateSitemap(articlesInfo);
+fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
+
+console.log('Index, article pages, and sitemap.xml generated successfully.');
