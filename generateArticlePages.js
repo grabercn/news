@@ -86,6 +86,20 @@ function generateArticlePage(article) {
   <footer>
     <p>&copy; 2025 Wiki Site</p>
   </footer>
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+<!-- Article page add -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6853203533491695"
+     data-ad-slot="3848103482"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </body>
 </html>`;
   return { slug, html };
@@ -206,6 +220,19 @@ function generateIndexPage(articlesInfo) {
       ${linksHtml}
     </ul>
   </main>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
+     crossorigin="anonymous"></script>
+    
+     <!-- Test add block -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6853203533491695"
+        data-ad-slot="6834951798"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   <footer>
     <p>&copy; 2025 Wiki Site</p>
   </footer>
