@@ -117,3 +117,11 @@ Do not include any warnings, disclaimers, or additional commentary.`;
 
 // Example usage:
 fetchArticle("Artificial Intelligence");
+fetchArticle("Robot Intelligence");
+fetchArticle("Car Intelligence");
+fetchArticle("People Intelligence");
+fetchArticle("Circle Intelligence");
+fetchArticle("Bear Intelligence");
+fetchArticle("Future Intelligence");
+fetchArticle("Past Intelligence");
+
