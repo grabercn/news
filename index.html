@@ -1,24 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple wiki site.">
-    <title>Wiki Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple wiki site." />
+  <title>Wiki Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Ads snippet placeholder (replace with your own code) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-XXXXXXXXXXXX", // Replace with your own ad client ID
+      enable_page_level_ads: true
+    });
+  </script>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 5px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+    /* Basic article list styles */
+    .article-summary {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    .article-summary:hover {
+      background-color: #f4f4f4;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Wiki Site</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to the Wiki</h2>
-        <p>This is a simple wiki-style site.</p>
-    </main>
-    <script src="script.js"></script>
+  <!-- Header with top-level ads -->
+  <header>
+    <h1>Wiki Site</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+    <!-- Ad container at top of page -->
+    <div id="ad-container">
+      <!-- Insert Google Ads code snippet here or any ad network code -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXX"
+           data-ad-slot="YYYYYYYYYY"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </header>
+
+  <main>
+    <h2>Welcome to the Wiki</h2>
+    <p>This is a simple wiki-style site.</p>
+    <!-- Container for the list of articles -->
+    <div id="articles"></div>
+  </main>
+
+  <!-- Modal popup container -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalShortDesc"></p>
+      <div id="modalArticle"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to create an article summary element
+    function createArticleSummary(article) {
+      const articleDiv = document.createElement('div');
+      articleDiv.classList.add('article-summary');
+
+      const titleElem = document.createElement('h3');
+      titleElem.textContent = article.title;
+      articleDiv.appendChild(titleElem);
+
+      const shortDescElem = document.createElement('p');
+      shortDescElem.textContent = article.shortDesc;
+      articleDiv.appendChild(shortDescElem);
+
+      // When the article summary is clicked, open the modal with full details.
+      articleDiv.addEventListener('click', () => {
+        openModal(article);
+      });
+
+      return articleDiv;
+    }
+
+    // Function to open the modal popup with article content.
+    function openModal(article) {
+      document.getElementById('modalTitle').textContent = article.title;
+      document.getElementById('modalShortDesc').textContent = article.shortDesc;
+      document.getElementById('modalArticle').textContent = article.article;
+      document.getElementById('articleModal').style.display = 'block';
+    }
+
+    // Function to close the modal popup.
+    function closeModal() {
+      document.getElementById('articleModal').style.display = 'none';
+    }
+
+    // Set up close event on modal close button.
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    // Also close modal when clicking outside of the modal-content.
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('articleModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Fetch articles from articles.json and display them
+    fetch('articles.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to load articles.json");
+        }
+        return response.json();
+      })
+      .then(data => {
+        const articlesContainer = document.getElementById('articles');
+        data.forEach(article => {
+          const articleElem = createArticleSummary(article);
+          articlesContainer.appendChild(articleElem);
+        });
+      })
+      .catch(error => {
+        console.error("Error loading articles:", error);
+      });
+  </script>
 </body>
 </html>
