@@ -143,31 +143,41 @@
     <!-- Social Share Buttons -->
     <div class="social-share">
       <ul>
-        <li><a id="share-facebook" href="#" target="_blank">Share on Facebook</a></li>
-        <li><a id="share-twitter" href="#" target="_blank">Share on X (Twitter)</a></li>
-        <li><a id="share-linkedin" href="#" target="_blank">Share on LinkedIn</a></li>
+        <li><button id="share-facebook">Share on Facebook</button></li>
+        <li><button id="share-twitter">Share on X (Twitter)</button></li>
+        <li><button id="share-linkedin">Share on LinkedIn</button></li>
+        <li><button id="share-instagram">Share on Instagram</button></li>
       </ul>
     </div>
 
     <script>
       (function() {
-        // Get the current page URL and title, then URL-encode them
+        // Use the current page URL and title (ensure you’re serving over HTTP/HTTPS, not file://)
         var pageUrl   = encodeURIComponent(window.location.href);
         var pageTitle = encodeURIComponent(document.title);
 
-        // Set up the share links:
-        // Facebook share
-        document.getElementById('share-facebook').href =
-          "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
+        // Facebook share button click
+        document.getElementById('share-facebook').addEventListener('click', function() {
+          var fbUrl = "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
+          window.open(fbUrl, 'fbshare', 'width=600,height=400');
+        });
 
-        // Twitter (X) share
-        document.getElementById('share-twitter').href =
-          "https://twitter.com/intent/tweet?text=" + pageTitle + "&url=" + pageUrl;
+        // Twitter (X) share button click
+        document.getElementById('share-twitter').addEventListener('click', function() {
+          var twitterUrl = "https://twitter.com/intent/tweet?text=" + pageTitle + "&url=" + pageUrl;
+          window.open(twitterUrl, 'twshare', 'width=600,height=400');
+        });
 
-        // LinkedIn share (optional – feel free to remove if not needed)
-        document.getElementById('share-linkedin').href =
-          "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl + "&title=" + pageTitle;
+        // LinkedIn share button click
+        document.getElementById('share-linkedin').addEventListener('click', function() {
+          var linkedInUrl = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl + "&title=" + pageTitle;
+          window.open(linkedInUrl, 'lishare', 'width=600,height=400');
+        });
 
+        // Instagram does not support direct URL sharing.
+        document.getElementById('share-instagram').addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('Instagram does not support web sharing. Please share manually via the Instagram app.');
         });
       })();
     </script>
@@ -183,18 +193,20 @@
       .social-share li {
         margin: 0;
       }
-      .social-share a {
-        text-decoration: none;
+      .social-share button {
+        cursor: pointer;
         background: #eee;
         padding: 8px 12px;
+        border: none;
         border-radius: 4px;
         color: #333;
         transition: background 0.3s;
       }
-      .social-share a:hover {
+      .social-share button:hover {
         background: #ddd;
       }
     </style>
+
       <h2>Short Description</h2>
       <p>Delve into the fascinating world of modern code as we reveal 10 jaw-dropping discoveries that will leave you in awe.</p>
     </section>
