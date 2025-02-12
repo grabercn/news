@@ -213,6 +213,11 @@ function generateArticlePage(article) {
       .social-share button:hover {
         background: #ddd;
       }
+      /* Other styles ... */
+      .article-content p {
+        margin-bottom: 1em;
+        line-height: 1.6;
+      }
     </style>
 
       <h2>Short Description</h2>
@@ -220,7 +225,9 @@ function generateArticlePage(article) {
     </section>
     <section>
       <h2>Article</h2>
-      <p>${article.article}</p>
+      <div class="article-content">
+        ${article.article}
+      </div>
     </section>
   </main>
     
