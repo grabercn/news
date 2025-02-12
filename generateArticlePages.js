@@ -161,7 +161,6 @@ function generateArticlePage(article) {
         <li><button id="share-facebook">Share on Facebook</button></li>
         <li><button id="share-twitter">Share on X (Twitter)</button></li>
         <li><button id="share-linkedin">Share on LinkedIn</button></li>
-        <li><button id="share-instagram">Share on Instagram</button></li>
       </ul>
     </div>
 
@@ -187,12 +186,6 @@ function generateArticlePage(article) {
         document.getElementById('share-linkedin').addEventListener('click', function() {
           var linkedInUrl = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl + "&title=" + pageTitle;
           window.open(linkedInUrl, 'lishare', 'width=600,height=400');
-        });
-
-        // Instagram does not support direct URL sharing.
-        document.getElementById('share-instagram').addEventListener('click', function(e) {
-          e.preventDefault();
-          alert('Instagram does not support web sharing. Please share manually via the Instagram app.');
         });
       })();
     </script>
