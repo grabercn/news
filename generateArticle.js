@@ -16,7 +16,7 @@ async function fetchArticle(topic) {
   };
 
   // System message that strictly defines the output format.
-  const systemPrompt = `You are an expert AI writing assistant. Write a creative, original, and coherent article about a given topic.
+  const systemPrompt = `You are an expert AI writing assistant. Write a creative, original, and coherent very long article about a given topic and include formatting.
 Output ONLY the article in the EXACT format below, with no extra text, disclaimers, or commentary:
 
 Title: <Article Title>
@@ -124,12 +124,7 @@ Do not include any warnings, disclaimers, or additional commentary.`;
 }
 
 // fetchArticle("TOPIC")
-fetchArticle("Opinion: Apple worth investing?")
-fetchArticle("Opinion: Oracle worth investing?")
-fetchArticle("Opinion: MSFT worth investing?")
-fetchArticle("Opinion: GOOGL worth investing?")
-fetchArticle("Opinion: TSLA worth investing?")
-
+fetchArticle("Opinion: John vs Jack?");
 
 
 
