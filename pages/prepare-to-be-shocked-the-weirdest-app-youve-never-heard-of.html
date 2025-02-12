@@ -140,6 +140,61 @@
 
   <main>
     <section>
+    <!-- Social Share Buttons -->
+    <div class="social-share">
+      <ul>
+        <li><a id="share-facebook" href="#" target="_blank">Share on Facebook</a></li>
+        <li><a id="share-twitter" href="#" target="_blank">Share on X (Twitter)</a></li>
+        <li><a id="share-linkedin" href="#" target="_blank">Share on LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <script>
+      (function() {
+        // Get the current page URL and title, then URL-encode them
+        var pageUrl   = encodeURIComponent(window.location.href);
+        var pageTitle = encodeURIComponent(document.title);
+
+        // Set up the share links:
+        // Facebook share
+        document.getElementById('share-facebook').href =
+          "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
+
+        // Twitter (X) share
+        document.getElementById('share-twitter').href =
+          "https://twitter.com/intent/tweet?text=" + pageTitle + "&url=" + pageUrl;
+
+        // LinkedIn share (optional – feel free to remove if not needed)
+        document.getElementById('share-linkedin').href =
+          "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl + "&title=" + pageTitle;
+
+        });
+      })();
+    </script>
+
+    <style>
+      .social-share ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+        display: flex;
+        gap: 10px;
+      }
+      .social-share li {
+        margin: 0;
+      }
+      .social-share a {
+        text-decoration: none;
+        background: #eee;
+        padding: 8px 12px;
+        border-radius: 4px;
+        color: #333;
+        transition: background 0.3s;
+      }
+      .social-share a:hover {
+        background: #ddd;
+      }
+    </style>
       <h2>Short Description</h2>
       <p>Explore the fascinating world of a bizarre and unheard-of mobile application that will leave you amazed and bewildered.</p>
     </section>
