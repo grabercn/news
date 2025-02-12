@@ -213,10 +213,29 @@ function generateArticlePage(article) {
       .social-share button:hover {
         background: #ddd;
       }
+      .article-meta {
+        margin: 20px 0;
+        font-size: 0.9em;
+        color: #555;
+        text-align: center;
+      }
+      .article-meta .author {
+        font-weight: bold;
+        color: #333;
+      }
+      .article-meta .date {
+        font-style: italic;
+      }
     </style>
 
-      <h2>Short Description</h2>
-      <p>Written by ${article.author} on ${article.date} </p>
+      !-- Article Meta Information -->
+      <section class="article-meta">
+        <p>
+          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
+        </p>
+      </section>
+
+      <h2>A Quick Look</h2>
       <p>${article.shortDesc}</p>
     </section>
     <section>
