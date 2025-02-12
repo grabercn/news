@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grabercn.github.io/sitemap.xml
+Sitemap: https://grabercn.github.io/wiki/sitemap.xml
