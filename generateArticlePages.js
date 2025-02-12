@@ -133,14 +133,7 @@ function generateArticlePage(article) {
 <body>
   <header>
     <h1>📰Ultimate Wiki - Article</h1>
-    <h2>${article.title}</h2>
-    <!-- Article Meta Information -->
-    <section class="article-meta">
-        <p>
-          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
-        </p>
-      </section>
-    <section>
+    <h4>${article.title}</h4>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
@@ -161,6 +154,14 @@ function generateArticlePage(article) {
   </script>
 
   <main>
+      <!-- Article Meta Information -->
+      <section class="article-meta">
+        <p>
+          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
+        </p>
+      </section>
+    <section>
+    
     <!-- Social Share Buttons -->
     <div class="social-share">
       <ul>
@@ -234,6 +235,9 @@ function generateArticlePage(article) {
       }
     </style>
 
+      <h2>A Quick Look</h2>
+      <p>${article.shortDesc}</p>
+    </section>
     <section>
       <h2>Article</h2>
       <p>${article.article}</p>
@@ -267,14 +271,11 @@ function generateArticlePage(article) {
  */
 function generateIndexPage(articlesInfo) {
   const linksHtml = articlesInfo.map(info => {
-    return `
-      <div class="article-card">
-        <a href="pages/${info.slug}.html">
-          <h3>${info.title}</h3>
-        </a>
-        <p class="description">${info.shortDesc}</p>
-      </div>
-    `;
+    return `<li>
+      <a href="pages/${info.slug}.html">
+        <h3>${info.title}</h3>
+      </a>
+    </li>`;
   }).join('\n');
 
   return `<!DOCTYPE html>
@@ -327,32 +328,34 @@ function generateIndexPage(articlesInfo) {
       text-decoration: none;
       font-weight: bold;
     }
+    #ad-container {
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
     main {
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-    }
-    .article-card {
       background-color: #fff;
-      margin-bottom: 20px;
-      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .article-card:hover {
-      transform: translateY(-5px);
+    ul {
+      list-style-type: none;
+      padding: 0;
     }
-    .article-card h3 {
-      margin: 0 0 10px 0;
-      font-size: 1.4em;
-      font-weight: bold;
+    li {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    li a {
+      text-decoration: none;
       color: #333;
     }
-    .article-card .description {
-      margin: 0;
-      font-size: 1em;
-      color: #555;
+    li a:hover h3 {
+      color: #4A90E2;
     }
     footer {
       text-align: center;
@@ -425,10 +428,11 @@ function generateIndexPage(articlesInfo) {
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
-  
   <main>
     <h2>Articles</h2>
+    <ul>
       ${linksHtml}
+    </ul>
   </main>
   <!-- Index page bottom ad -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6853203533491695"
