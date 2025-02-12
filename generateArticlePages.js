@@ -132,7 +132,8 @@ function generateArticlePage(article) {
 
 <body>
   <header>
-    <h1>📰Ultimate Wiki - Reading ${article.title}</h1>
+    <h1>📰Ultimate Wiki - Article</h1>
+    <h4>${article.title}</h4>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
