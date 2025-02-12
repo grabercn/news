@@ -41,7 +41,7 @@ function generateArticlePage(article) {
   <meta name="twitter:description" content="${article.shortDesc} - You won’t believe this!">
   <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/${article.slug}.jpg">
   <meta name="twitter:url" content="https://grabercn.github.io/wiki/pages/${article.slug}.html">
-  <title>📰 Reading ${article.title}</title>
+  <title>Reading ${article.title}</title>
   <!-- Use a modern font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -236,7 +236,7 @@ function generateIndexPage(articlesInfo) {
   <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/home.jpg">
   <meta name="twitter:url" content="https://grabercn.github.io/wiki/index.html">
 
-  <title>🔥 Ultimate Wiki - Explore Trending Articles!</title>
+  <title>Ultimate Wiki - Explore Trending Articles!</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
