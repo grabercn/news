@@ -20,6 +20,26 @@ function generateArticlePage(article) {
   <meta name="google-site-verification" content="sKW7J47k_ZTMFQb3F858OgHLRVikjHJjwhyhAvtyehg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${article.shortDesc}">
+  <!-- SEO Meta Tags -->
+  <meta name="title" content="🔥 ${article.title} - Must Read!">
+  <meta name="description" content="${article.shortDesc} - Click to discover more!">
+  <meta name="keywords" content="${article.title.replace(/\s+/g, ', ')}, trending, latest news, must-read, viral">
+  <meta name="author" content="Wiki Site">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="🔥 ${article.title} - Must Read!">
+  <meta property="og:description" content="${article.shortDesc} - You won’t believe this!">
+  <meta property="og:image" content="https://grabercn.github.io/wiki/preview/${article.slug}.jpg">
+  <meta property="og:url" content="https://grabercn.github.io/wiki/pages/${article.slug}.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🔥 ${article.title} - Must Read!">
+  <meta name="twitter:description" content="${article.shortDesc} - You won’t believe this!">
+  <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/${article.slug}.jpg">
+  <meta name="twitter:url" content="https://grabercn.github.io/wiki/pages/${article.slug}.html">
   <title>${article.title}</title>
   <!-- Use a modern font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -162,6 +182,28 @@ function generateIndexPage(articlesInfo) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Wiki Home">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="title" content="🔥 Ultimate Wiki - Explore Trending Articles!">
+  <meta name="description" content="Discover the latest and most fascinating articles on a wide range of topics. Stay informed, stay entertained!">
+  <meta name="keywords" content="wiki, trending articles, latest news, must-read, viral, knowledge, facts">
+  <meta name="author" content="Wiki Site">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="🔥 Ultimate Wiki - Explore Trending Articles!">
+  <meta property="og:description" content="Discover the latest and most fascinating articles. Stay informed, stay entertained!">
+  <meta property="og:image" content="https://grabercn.github.io/wiki/preview/home.jpg">
+  <meta property="og:url" content="https://grabercn.github.io/wiki/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🔥 Ultimate Wiki - Explore Trending Articles!">
+  <meta name="twitter:description" content="Discover the latest and most fascinating articles. Stay informed, stay entertained!">
+  <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/home.jpg">
+  <meta name="twitter:url" content="https://grabercn.github.io/wiki/index.html">
+
   <title>Wiki Home</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
