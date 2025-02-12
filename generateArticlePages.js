@@ -154,7 +154,14 @@ function generateArticlePage(article) {
   </script>
 
   <main>
+      <!-- Article Meta Information -->
+      <section class="article-meta">
+        <p>
+          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
+        </p>
+      </section>
     <section>
+    
     <!-- Social Share Buttons -->
     <div class="social-share">
       <ul>
@@ -227,13 +234,6 @@ function generateArticlePage(article) {
         font-style: italic;
       }
     </style>
-
-      !-- Article Meta Information -->
-      <section class="article-meta">
-        <p>
-          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
-        </p>
-      </section>
 
       <h2>A Quick Look</h2>
       <p>${article.shortDesc}</p>
