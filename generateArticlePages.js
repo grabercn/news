@@ -41,7 +41,7 @@ function generateArticlePage(article) {
   <meta name="twitter:description" content="${article.shortDesc} - You won’t believe this!">
   <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/${article.slug}.jpg">
   <meta name="twitter:url" content="https://grabercn.github.io/wiki/pages/${article.slug}.html">
-  <title>${article.title}</title>
+  <title>📰 Reading ${article.title}</title>
   <!-- Use a modern font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -86,6 +86,38 @@ function generateArticlePage(article) {
       color: #777;
     }
   </style>
+  <script>
+    function setEmojiFavicon(emoji) {
+      // Create a canvas element
+      const canvas = document.createElement('canvas');
+      canvas.width = 64;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+
+      // Set the font and alignment so the emoji is centered
+      ctx.font = '64px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      // Draw the emoji in the center of the canvas
+      ctx.fillText(emoji, canvas.width / 2, canvas.height / 2);
+
+      // Convert canvas to a data URL and set it as the favicon
+      const faviconUrl = canvas.toDataURL('image/png');
+      let faviconLink = document.querySelector("link[rel*='icon']");
+
+      // If a favicon already exists, remove it; otherwise, create a new one.
+      if (!faviconLink) {
+        faviconLink = document.createElement('link');
+        faviconLink.rel = 'icon';
+        document.head.appendChild(faviconLink);
+      }
+      faviconLink.href = faviconUrl;
+    }
+
+    // Example: Set the favicon to a fire emoji
+    setEmojiFavicon("📰");
+  </script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -204,7 +236,7 @@ function generateIndexPage(articlesInfo) {
   <meta name="twitter:image" content="https://grabercn.github.io/wiki/preview/home.jpg">
   <meta name="twitter:url" content="https://grabercn.github.io/wiki/index.html">
 
-  <title>Wiki Home</title>
+  <title>🔥 Ultimate Wiki - Explore Trending Articles!</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -274,6 +306,38 @@ function generateIndexPage(articlesInfo) {
        data-full-width-responsive="true"></ins>
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <script>
+    function setEmojiFavicon(emoji) {
+      // Create a canvas element
+      const canvas = document.createElement('canvas');
+      canvas.width = 64;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+
+      // Set the font and alignment so the emoji is centered
+      ctx.font = '64px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      // Draw the emoji in the center of the canvas
+      ctx.fillText(emoji, canvas.width / 2, canvas.height / 2);
+
+      // Convert canvas to a data URL and set it as the favicon
+      const faviconUrl = canvas.toDataURL('image/png');
+      let faviconLink = document.querySelector("link[rel*='icon']");
+
+      // If a favicon already exists, remove it; otherwise, create a new one.
+      if (!faviconLink) {
+        faviconLink = document.createElement('link');
+        faviconLink.rel = 'icon';
+        document.head.appendChild(faviconLink);
+      }
+      faviconLink.href = faviconUrl;
+    }
+
+    // Example: Set the favicon to a fire emoji
+    setEmojiFavicon("🔥");
   </script>
 </head>
 
