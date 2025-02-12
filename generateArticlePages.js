@@ -133,7 +133,14 @@ function generateArticlePage(article) {
 <body>
   <header>
     <h1>📰Ultimate Wiki - Article</h1>
-    <h4>${article.title}</h4>
+    <h2>${article.title}</h2>
+    <!-- Article Meta Information -->
+    <section class="article-meta">
+        <p>
+          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
+        </p>
+      </section>
+    <section>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
@@ -154,7 +161,6 @@ function generateArticlePage(article) {
   </script>
 
   <main>
-
     <!-- Social Share Buttons -->
     <div class="social-share">
       <ul>
@@ -227,14 +233,6 @@ function generateArticlePage(article) {
         font-style: italic;
       }
     </style>
-
-    <!-- Article Meta Information -->
-    <section class="article-meta">
-        <p>
-          Written by <span class="author">${article.author}</span> on <span class="date">${article.date}</span>
-        </p>
-      </section>
-    <section>
 
     <section>
       <h2>Article</h2>
