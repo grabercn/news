@@ -274,7 +274,6 @@ function generateIndexPage(articlesInfo) {
     return `<li>
       <a href="pages/${info.slug}.html">
         <h3>${info.title}</h3>
-        <p><i>${info.shortDesc}</i></p>
       </a>
     </li>`;
   }).join('\n');
