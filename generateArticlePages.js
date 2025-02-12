@@ -20,6 +20,7 @@ function generateArticlePage(article) {
   <meta name="google-site-verification" content="sKW7J47k_ZTMFQb3F858OgHLRVikjHJjwhyhAvtyehg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${article.shortDesc}">
+  
   <!-- SEO Meta Tags -->
   <meta name="title" content="🔥 ${article.title} - Must Read!">
   <meta name="description" content="${article.shortDesc} - Click to discover more!">
@@ -181,7 +182,6 @@ function generateIndexPage(articlesInfo) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wiki Home">
   
   <!-- SEO Meta Tags -->
   <meta name="title" content="🔥 Ultimate Wiki - Explore Trending Articles!">
